@@ -81,6 +81,11 @@ namespace GooglePlayGames.Native
             }
         }
 
+        public void ReAuthenticateLDRLYOverride() 
+        {
+            HandleAuthTransition(Types.AuthOperation.SIGN_IN, Status.AuthStatus.VALID);
+        }
+
         public void Authenticate(Action<bool> callback, bool silent)
         {
             lock (AuthStateLock)

@@ -259,6 +259,16 @@ namespace GooglePlayGames
         }
 
         /// <summary>
+        /// Re-Authenticate the currently authenticated user to re-populate the achievements
+        /// that were not being populated properly the first app launch.
+        /// HACKED workaround - June 10th, 2015. Wes Alcock
+        /// </summary>
+        public void ReAuthenticateLDRLYOverride() 
+        {
+            mClient.ReAuthenticateLDRLYOverride ();
+        }
+
+        /// <summary>
         /// Authenticate the local user with the Google Play Games service.
         /// </summary>
         /// <param name='callback'>

@@ -23,6 +23,11 @@ namespace GooglePlayGames.BasicApi
 
 public class DummyClient : IPlayGamesClient
   {
+    public void ReAuthenticateLDRLYOverride() 
+    {
+      LogUsage ();
+    }
+    
     public void Authenticate(System.Action<bool> callback, bool silent)
     {
       LogUsage();

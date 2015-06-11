@@ -57,6 +57,13 @@ namespace GooglePlayGames.BasicApi
     void Authenticate(System.Action<bool> callback, bool silent);
 
     /// <summary>
+    /// Re-Authenticate the currently authenticated user to re-populate the achievements
+    /// that were not being populated properly the first app launch.
+    /// HACKED workaround - June 10th, 2015. Wes Alcock
+    /// </summary>
+    void ReAuthenticateLDRLYOverride();
+
+    /// <summary>
     /// Returns whether or not user is authenticated.
     /// </summary>
     /// <returns><c>true</c> if the user is authenticated; otherwise, <c>false</c>.</returns>
